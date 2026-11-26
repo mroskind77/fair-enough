@@ -80,3 +80,11 @@ don't change the rule silently. Rules marked **[tested]** have automated tests i
     `.env.example` and `ENV_VARS.md` list names, never values. Reports name keys, never show values.
     **Scan before every publish and before any export:** `node scripts/scan-secrets.mjs` (part of `scripts/test.sh`),
     plus `node scripts/scan-secrets.mjs --bundle <downloaded assets>` on the built site. **[tested]**
+
+## Home-screen app (PWA)
+23. **Installable** — `/manifest.webmanifest` (id `/`, standalone, portrait, colours from `--fe-bg` `#F4F5F7`) lists
+    `icon-192/512` (any) and `icon-maskable-192/512` (maskable, artwork inside the central safe zone, from
+    `src/assets/brand/icon-maskable.svg`). `apple-touch-icon.png` is 180×180 with no transparency. Head tags live in
+    `src/config/app-head.ts`; the light/dark `theme-color` pair is in `src/routes/__root.tsx` because the router keeps
+    only one meta per name. Header, footer and sheets pad with `env(safe-area-inset-*)`. No service worker.
+    **[tested]** `tests/pwa.test.ts`.

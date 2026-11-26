@@ -39,6 +39,8 @@ function RootDocument({ children }: { children: ReactNode }) {
 		>
 			<head>
 				<HeadContent />
+				<meta name="theme-color" content="#F4F5F7" media="(prefers-color-scheme: light)" />
+				<meta name="theme-color" content="#0E1114" media="(prefers-color-scheme: dark)" />
 			</head>
 			<body className="bg-background font-sans text-foreground antialiased">
 				{children}

@@ -37,8 +37,12 @@ export function getAppHead(): AppHead {
 				content: 'Find a place in Israel that is fair for everyone: similar travel times, open the whole meeting, and a ride home.',
 			},
 			{ name: 'author', content: 'Fair Enough' },
-			{ name: 'theme-color', content: '#F2EEE6', media: '(prefers-color-scheme: light)' },
-			{ name: 'theme-color', content: '#14171A', media: '(prefers-color-scheme: dark)' },
+			// theme-color (light + dark) is rendered in __root.tsx: the router keeps only one meta per name.
+			// Home-screen app (PWA): standalone launch on iOS and Android.
+			{ name: 'apple-mobile-web-app-capable', content: 'yes' },
+			{ name: 'mobile-web-app-capable', content: 'yes' },
+			{ name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+			{ name: 'apple-mobile-web-app-title', content: 'Fair Enough' },
 			{ property: 'og:site_name', content: SITE_NAME },
 			{ property: 'og:title', content: 'Fair Enough · The fair place to meet' },
 			{ property: 'og:description', content: 'A fair place to meet in Israel, by car, bus or on foot.' },
@@ -49,10 +53,12 @@ export function getAppHead(): AppHead {
 			{ name: 'twitter:description', content: 'A fair place to meet in Israel, by car, bus or on foot.' },
 		],
 		links: [
-			{ rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
+			{ rel: 'manifest', href: '/manifest.webmanifest' },
+			{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
 			{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-			{ rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-			{ rel: 'manifest', href: '/site.webmanifest' },
+			{ rel: 'icon', type: 'image/png', sizes: '192x192', href: '/icon-192.png' },
+			{ rel: 'icon', type: 'image/png', sizes: '512x512', href: '/icon-512.png' },
+			{ rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
 			{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
 			{
