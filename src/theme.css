@@ -1,0 +1,68 @@
+/**
+ * ⚠️ THEME CONFIGURATION — Tailwind v4
+ * Add custom theme values INSIDE the @theme { } block below.
+ * Do NOT nest @media, @layer, or other at-rules inside @theme.
+ * Do NOT create a tailwind.config.js — all theming is done here.
+ * Keep all { } braces balanced.
+ *
+ * Fair Enough — direction "Transit diagram" (redesign brief v1). Colour values live as --fe-* variables in
+ * custom.css so light/dark (system + manual override) switch in one place.
+ */
+@theme {
+	--font-sans: 'Rubik', system-ui, sans-serif;
+
+	/* Type scale (size / line height) */
+	--text-hero-num: 40px;
+	--text-hero-num--line-height: 40px;
+	--text-display: 30px;
+	--text-display--line-height: 34px;
+	--text-title: 20px;
+	--text-title--line-height: 26px;
+	--text-body: 16px;
+	--text-body--line-height: 24px;
+	--text-small: 14px;
+	--text-small--line-height: 20px;
+	--text-micro: 12px;
+	--text-micro--line-height: 16px;
+
+	/* Colors */
+	--color-background: var(--fe-bg);
+	--color-foreground: var(--fe-ink);
+	--color-surface: var(--fe-surface);
+	--color-surface-2: var(--fe-surface-2);
+	--color-ink: var(--fe-ink);
+	--color-on-ink: var(--fe-on-ink);
+
+	--color-primary: var(--fe-ink);
+	--color-primary-foreground: var(--fe-on-ink);
+
+	--color-secondary: var(--fe-surface-2);
+	--color-secondary-foreground: var(--fe-ink);
+
+	--color-destructive: var(--fe-warn);
+	--color-destructive-foreground: var(--fe-on-ink);
+	--color-warn: var(--fe-warn);
+	--color-warn-bg: var(--fe-warn-bg);
+
+	--color-muted: var(--fe-surface-2);
+	--color-muted-foreground: var(--fe-muted);
+
+	--color-accent: var(--fe-surface-2);
+	--color-accent-foreground: var(--fe-ink);
+
+	--color-border: var(--fe-line);
+	--color-input: var(--fe-line);
+	--color-ring: var(--fe-ink);
+
+	--color-person-1: var(--fe-p1);
+	--color-person-2: var(--fe-p2);
+	--color-person-3: var(--fe-p3);
+
+	/* Radius: buttons/inputs 8px, cards 12px */
+	--radius-xs: 4px;
+	--radius-sm: 8px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+	--radius-xl: 12px;
+	--radius-2xl: 12px;
+}

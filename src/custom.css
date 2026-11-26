@@ -1,0 +1,138 @@
+/**
+ * CUSTOM CSS ESCAPE HATCH
+ * Used for: theme variables (system + manual light/dark),
+ * rule, and keyframes Tailwind can't express.
+ */
+
+:root {
+	color-scheme: light;
+	--fe-bg: #f4f5f7;
+	--fe-surface: #ffffff;
+	--fe-surface-2: #e8ebef;
+	--fe-ink: #111418;
+	--fe-muted: #555d66;
+	--fe-line: #cdd2d8;
+	--fe-p1: #1f6fd1;
+	--fe-p2: #b85a00;
+	--fe-p3: #00806a;
+	--fe-warn: #c4231c;
+	--fe-warn-bg: #fdecea;
+	--fe-on-ink: #ffffff;
+	/* B2 logo colours (light lockup / dark lockup from the brand package) */
+	--fe-logo-a: #1f6fd1;
+	--fe-logo-b: #b85a00;
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--fe-bg: #0e1114;
+	--fe-surface: #171b20;
+	--fe-surface-2: #222830;
+	--fe-ink: #eef0f2;
+	--fe-muted: #a0a8b1;
+	--fe-line: #343b44;
+	--fe-p1: #5ea6ff;
+	--fe-p2: #f59a3d;
+	--fe-p3: #34c4a0;
+	--fe-warn: #ff7a70;
+	--fe-warn-bg: #3a1714;
+	--fe-on-ink: #0e1114;
+	--fe-logo-a: #64a5fa;
+	--fe-logo-b: #ffaa55;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		color-scheme: dark;
+		--fe-bg: #0e1114;
+		--fe-surface: #171b20;
+		--fe-surface-2: #222830;
+		--fe-ink: #eef0f2;
+		--fe-muted: #a0a8b1;
+		--fe-line: #343b44;
+		--fe-p1: #5ea6ff;
+		--fe-p2: #f59a3d;
+		--fe-p3: #34c4a0;
+		--fe-warn: #ff7a70;
+		--fe-warn-bg: #3a1714;
+		--fe-on-ink: #0e1114;
+		--fe-logo-a: #64a5fa;
+		--fe-logo-b: #ffaa55;
+	}
+}
+
+/* Times, dates and minute counts line up in columns */
+.num {
+	font-variant-numeric: tabular-nums;
+}
+
+/* Focus: 2px ink ring with a 2px offset, everywhere */
+:focus-visible {
+	outline: 2px solid var(--fe-ink);
+	outline-offset: 2px;
+}
+
+/* "Checking": dashed trip line marching toward the ring */
+@keyframes fe-march {
+	to {
+		stroke-dashoffset: -20;
+	}
+}
+
+.fe-march {
+	animation: fe-march 1.2s linear infinite;
+}
+
+/* Route lines drawing toward the meeting dot */
+@keyframes fe-draw {
+	from {
+		stroke-dashoffset: var(--fe-len, 100);
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+.fe-draw {
+	stroke-dasharray: var(--fe-len, 100);
+	animation: fe-draw 420ms ease-out both;
+}
+
+@keyframes fe-settle {
+	from {
+		transform: scale(0.4);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.fe-settle {
+	transform-origin: center;
+	transform-box: fill-box;
+	animation: fe-settle 220ms ease-out 380ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fe-draw,
+	.fe-settle,
+	.fe-march {
+		animation: none;
+	}
+}
+
+/* MapLibre attribution follows the theme */
+.maplibregl-ctrl-attrib {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 500;
+	background: color-mix(in srgb, var(--fe-bg) 85%, transparent) !important;
+	color: var(--fe-ink) !important;
+	font-family: var(--font-sans);
+}
+
+.maplibregl-ctrl-attrib a {
+	color: var(--fe-ink) !important;
+}

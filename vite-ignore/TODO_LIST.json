@@ -1,0 +1,37 @@
+{
+  "summary": "Speed and polish pass",
+  "todos": [
+    {
+      "id": 1,
+      "description": "Staged real trips (top 3, then on scroll) + fairer-option hint",
+      "files": [],
+      "status": "complete"
+    },
+    {
+      "id": 2,
+      "description": "Ride home on tap, with retry and no red line on missing data",
+      "files": [],
+      "status": "complete"
+    },
+    {
+      "id": 3,
+      "description": "Loading copy, ~ tooltip, duplicate suggestions",
+      "files": [],
+      "status": "complete"
+    },
+    {
+      "id": 4,
+      "description": "Map: keep instance on language switch, blank missing images",
+      "files": [],
+      "status": "complete"
+    },
+    {
+      "id": 5,
+      "description": "Widened-area investigation, call counts, deploy and publish",
+      "files": [],
+      "status": "complete"
+    }
+  ],
+  "createdAt": "2026-11-26T13:03:04.878Z",
+  "updatedAt": "2026-11-26T13:19:41.019Z"
+}

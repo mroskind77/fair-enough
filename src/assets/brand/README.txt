@@ -1,0 +1,1 @@
+Fair Enough B2. Main mark uses equal-length rotationally symmetric paths. Favicon is separate 16-unit geometry with 2.5-unit stroke and horizontal split at y=8. SVG wordmarks are outlined. Maskable icon uses a conservative central safe circle. Native store assets intentionally deferred. Light is default; dark alternatives provided.
