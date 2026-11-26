@@ -48,7 +48,7 @@ const COPY: Record<
 		],
 		licenceTitle: 'Licence',
 		licence: `Code: open source under the ${LICENCE_NAME} licence. Map data © OpenStreetMap contributors, available under the Open Database Licence.`,
-		repo: 'Source code',
+		repo: 'Open source · MIT',
 		donate: 'Bus and train times come from Transitous, run by volunteers. Support them with a donation.',
 		contactTitle: 'Contact',
 		contact: 'Wrong hours or kosher info? Use "Report a problem" on the place. It reaches us directly.',
@@ -66,7 +66,7 @@ const COPY: Record<
 		],
 		licenceTitle: 'רישיון',
 		licence: `הקוד: קוד פתוח ברישיון ${LICENCE_NAME}. נתוני המפה © תורמי OpenStreetMap, ברישיון Open Database License.`,
-		repo: 'קוד המקור',
+		repo: 'קוד פתוח · MIT',
 		donate: 'זמני האוטובוסים והרכבות מגיעים מ־Transitous, שמופעל על ידי מתנדבים. אפשר לתמוך בהם בתרומה.',
 		contactTitle: 'יצירת קשר',
 		contact: 'שעות או כשרות לא נכונות? לחצו על "דיווח על בעיה" ליד המקום. הדיווח מגיע אלינו ישירות.',
@@ -110,7 +110,7 @@ function About() {
 					<p className="text-pretty">{c.licence}</p>
 					<p>
 						<a href={REPO_URL} target="_blank" rel="noreferrer" className="font-semibold underline underline-offset-2">
-							Open source · MIT
+							{c.repo}
 						</a>{' '}
 						<span dir="ltr" className="text-sm text-muted-foreground">
 							({REPO_URL.replace('https://', '')})
