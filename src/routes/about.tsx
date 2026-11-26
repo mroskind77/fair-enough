@@ -27,7 +27,7 @@ const SOURCES = [
 ];
 
 // Fill in the repository name once the code is public.
-const REPO_URL = 'https://github.com/mroskind77/<repo>';
+const REPO_URL = 'https://github.com/mroskind77/fair-enough';
 const LICENCE_NAME = 'MIT';
 const TRANSITOUS_DONATE = 'https://transitous.org/donate/';
 
@@ -110,7 +110,7 @@ function About() {
 					<p className="text-pretty">{c.licence}</p>
 					<p>
 						<a href={REPO_URL} target="_blank" rel="noreferrer" className="font-semibold underline underline-offset-2">
-							{c.repo}
+							Open source · MIT
 						</a>{' '}
 						<span dir="ltr" className="text-sm text-muted-foreground">
 							({REPO_URL.replace('https://', '')})
